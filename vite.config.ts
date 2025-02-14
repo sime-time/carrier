@@ -7,4 +7,7 @@ export default defineConfig({
     solid(),
     tailwindcss(),
   ],
+  build: {
+    outDir: "docs"
+  }
 })
