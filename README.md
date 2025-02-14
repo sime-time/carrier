@@ -10,4 +10,3 @@ Please submit your completed table as a link that allows easy access to your sub
 - Solid.js
 - Tailwind css
 - Vite
-- Github Pages
