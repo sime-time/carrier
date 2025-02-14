@@ -29,6 +29,14 @@ export default function App() {
     return performanceData[outdoor]?.[edb]?.[cfm] || undefined;
   };
 
+  const getCapacityColor = (value: number): string => {
+    let result: string = "";
+    if (value <= 13.7) result = "text-cyan-300";
+    if (value > 13.7 && value < 40.2) result = "text-warning";
+    if (value >= 40.2) result = "text-red-700";
+    return result;
+  };
+
   return (
     <main class="bg-base-100 w-full flex flex-col-reverse md:flex-col items-center gap-6 md:gap-10 my-12">
       {/* Toggle Temperature Unit */}
@@ -110,9 +118,19 @@ export default function App() {
           {(cfm) => (
             <>
               <div class="rounded-lg bg-secondary p-2 font-semibold">{cfm}</div>
-              <div class="rounded-lg bg-secondary/70 p-2">{getCapacityData(outdoor(), edb(), cfm).total}</div>
-              <div class="rounded-lg bg-secondary/70 p-2">{getCapacityData(outdoor(), edb(), cfm).integ}</div>
-              <div class="rounded-lg bg-secondary/70 p-2">{getCapacityData(outdoor(), edb(), cfm).totalSystemkW}</div>
+              <div
+                class={`rounded-lg bg-secondary/70 p-2 ${getCapacityColor(parseInt(getCapacityData(outdoor(), edb(), cfm).total))}`}
+              >
+                {getCapacityData(outdoor(), edb(), cfm).total}
+              </div>
+              <div
+                class={`rounded-lg bg-secondary/70 p-2 ${getCapacityColor(parseInt(getCapacityData(outdoor(), edb(), cfm).integ))}`}
+              >
+                {getCapacityData(outdoor(), edb(), cfm).integ}
+              </div>
+              <div class="rounded-lg bg-secondary/70 p-2">
+                {getCapacityData(outdoor(), edb(), cfm).totalSystemkW}
+              </div>
             </>
           )}
         </For>
