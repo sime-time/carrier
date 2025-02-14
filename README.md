@@ -1,29 +1,12 @@
-## Usage
+# Carrier Submission Request
 
-```bash
-$ npm install # or pnpm install or yarn install
-```
+Below is a table that the web development team has just received.  It needs to be recreated in a web format and responsive in both desktop and mobile browsers.  You may creatively choose how you want to represent the table, but ALL data MUST be present, including the “notes" beneath the table.
 
-### Learn more on the [Solid Website](https://solidjs.com) and come chat with us on our [Discord](https://discord.com/invite/solidjs)
+Please submit your completed table as a link that allows easy access to your submission, listed with your name in the email.
 
-## Available Scripts
+## Tech Stack
 
-In the project directory, you can run:
-
-### `npm run dev`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
-
-### `npm run build`
-
-Builds the app for production to the `dist` folder.<br>
-It correctly bundles Solid in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-## Deployment
-
-Learn more about deploying your application with the [documentations](https://vite.dev/guide/static-deploy.html)
-# carrier
+- Solid.js
+- Tailwind css
+- Vite
+- Github Pages
