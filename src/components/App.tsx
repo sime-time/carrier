@@ -6,7 +6,7 @@ import { For, createSignal } from "solid-js";
 import Notes from "./Notes";
 import { performanceData } from "../data/performanceData";
 
-export default function GridLayout() {
+export default function App() {
   // Fahrenheit Temperatures
   const outdoorTemps = [0, 10, 20, 30, 40, 50, 60];
   const edbTemps = [65, 70, 75];
@@ -26,15 +26,11 @@ export default function GridLayout() {
   };
 
   const getCapacityData: any = (outdoor: number, edb: number, cfm: number) => {
-    console.log(outdoor)
-    console.log(edb)
-    console.log(cfm)
-    console.log(performanceData[outdoor]?.[edb]?.[cfm])
     return performanceData[outdoor]?.[edb]?.[cfm] || undefined;
   };
 
   return (
-    <>
+    <main class="bg-base-100 w-full flex flex-col-reverse md:flex-col items-center gap-6 md:gap-10 my-12">
       {/* Toggle Temperature Unit */}
       <section class="flex justify-between w-full max-w-5xl flex-col gap-6 items-center md:flex-row md:items-end ">
         <div class="flex justify-center items-center gap-4 font-semibold text-xl text-accent">
@@ -121,6 +117,6 @@ export default function GridLayout() {
           )}
         </For>
       </div>
-    </>
+    </main>
   );
 }
