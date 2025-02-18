@@ -119,12 +119,12 @@ export default function App() {
             <>
               <div class="rounded-lg bg-secondary p-2 font-semibold">{cfm}</div>
               <div
-                class={`rounded-lg bg-secondary/70 p-2 ${getCapacityColor(parseInt(getCapacityData(outdoor(), edb(), cfm).total))}`}
+                class={`rounded-lg bg-secondary/70 p-2 ${getCapacityColor(parseFloat(getCapacityData(outdoor(), edb(), cfm).total))}`}
               >
                 {getCapacityData(outdoor(), edb(), cfm).total}
               </div>
               <div
-                class={`rounded-lg bg-secondary/70 p-2 ${getCapacityColor(parseInt(getCapacityData(outdoor(), edb(), cfm).integ))}`}
+                class={`rounded-lg bg-secondary/70 p-2 ${getCapacityColor(parseFloat(getCapacityData(outdoor(), edb(), cfm).integ))}`}
               >
                 {getCapacityData(outdoor(), edb(), cfm).integ}
               </div>
